@@ -15,8 +15,12 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
 
 
 const setBackground = (weatherDesc) => {
-    if(weatherDesc == "clear sky"){
-        console.log("clear skies")
-        document.body.style.backgroundImage = "url('clearSky.jpg')"
+    switch (weatherDesc) {
+        case "clear sky":
+            document.body.style.backgroundImage = "url('clearSky.jpg')"
+            break;
+    
+        default:
+            break;
     }
 }

@@ -1,0 +1,24 @@
+body{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+h1{
+    color: white;
+    font-size: 150px;
+    opacity: 75%;
+}
+
+h3{
+    color: white;
+    font-size: 100px;
+    opacity: 85%;
+}
+
+#weather_info{
+    text-align: center;
+    margin-top: 25%;
+}
+
