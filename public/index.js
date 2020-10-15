@@ -10,7 +10,7 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
     const weatherCard = document.getElementById("weather_info")
     weatherCard.innerHTML += `<h1>${city}</h1>`
     weatherCard.innerHTML += `<h3>${weather.description}</h3>`
-    setBackground(weather.main, weather.description)
+    setBackground("Rain", weather.description)
 })
 
 
@@ -23,6 +23,10 @@ const setBackground = (mainWeather, weatherDesc) => {
         case "Clouds":
             Clouds(weatherDesc)
             break;
+
+        case "Rain":
+            Rain() 
+            break;
     
         default:
             break;
@@ -31,6 +35,10 @@ const setBackground = (mainWeather, weatherDesc) => {
 
 const Clear = () => {
     document.body.style.backgroundImage = "url('clearSky.jpg')"
+}
+
+const Rain = () => {
+    //set background image 
 }
 
 const Clouds = (weatherDesc) => {
