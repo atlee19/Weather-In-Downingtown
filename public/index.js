@@ -10,7 +10,7 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
     const weatherCard = document.getElementById("weather_info")
     weatherCard.innerHTML += `<h1>${city}</h1>`
     weatherCard.innerHTML += `<h3>${weather.description}</h3>`
-    setBackground("Rain", weather.description)
+    setBackground(weather.main, weather.description)
 })
 
 
