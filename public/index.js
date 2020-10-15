@@ -44,8 +44,7 @@ const Rain = () => {
 const Clouds = (weatherDesc) => {
     switch (weatherDesc) {
         case "few clouds":
-            //code
-            console.log('few clouds detected!')
+            document.body.style.backgroundImage = "url('fewClouds.jpg')"
             break;
         
         case "scattered clouds":
