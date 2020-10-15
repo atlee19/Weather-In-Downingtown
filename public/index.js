@@ -6,6 +6,17 @@ fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`)
 .then(res => res.json())
 .then(data => {
     const weather = data.weather[0]
-    console.log(weather.description)
     
+    const weatherCard = document.getElementById("weather_info")
+    weatherCard.innerHTML += `<h1>${city}</h1>`
+    weatherCard.innerHTML += `<h3>${weather.description}</h3>`
+    setBackground(weather.description)
 })
+
+
+const setBackground = (weatherDesc) => {
+    if(weatherDesc == "clear sky"){
+        console.log("clear skies")
+        document.body.style.backgroundImage = "url('clearSky.jpg')"
+    }
+}
